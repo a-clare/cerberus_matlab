@@ -4,6 +4,8 @@
 extern "C" {
 #endif
 
+#include "inertial_simulator/errors.h"
+
 /**
  * @brief Configuration struct for initializing an Inertial Simulator
  * 
@@ -16,8 +18,10 @@ typedef struct inertial_sim_Config {
   struct {
     // Position errors in the NED frame, in units of metres
     double pos_ned[3];
+
     // Velocity errors in the NED frame, in units of metres / second
     double vel_ned[3];
+
     // Attitude errors in the NED frame, in units of radians
     double att_ned[3];
   } init_errors;
@@ -33,24 +37,41 @@ typedef struct inertial_sim_Config {
   struct {
     // Accelerometer biases in micro-g
     double acc_biases[3];
+
     // Gyro biases in deg/hour
     double gyro_biases[3];
+
     // Acceleormeter scale factor and cross coupling errors in ppm
     double acc_M[3][3];
+
     // Gyro scale factor and cross coupling errors in ppm
     double gyro_M[3][3];
+
     // Gyro g-dependent biases (deg/hour/g)
     double gyro_G[3][3];
+
     // Accelerometer noise root psd in micro-g / sqrt(Hz)
     double acc_noise[3];
+
     // Gyro noise root psd in deg / sqrt(hour)
     double gyro_noise[3];
+
     // Accelometer quantization level
     double acc_q[3];
+
     // Gyro quantization level
     double gyro_q[3];
   } imu_errors;
 } inertial_sim_Config;
+
+/**
+ * @brief Simply set all the config values to the default value (likely 0)
+ * 
+ * @param config 
+ * @return INERTIAL_SIM_ERROR_NONE if succesful
+ * @return INERTIAL_SIM_ERROR_NULL_INPUT if config is null
+ */
+INERTIAL_SIM_ERROR inertial_sim_config_init(inertial_sim_Config* config);
 
 #ifdef __cplusplus
 }
