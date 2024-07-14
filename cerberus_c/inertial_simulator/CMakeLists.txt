@@ -1,0 +1,2 @@
+project(inertial_simulator)
+

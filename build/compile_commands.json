@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/adamclare/projects/cerberus/build/cerberus_c/apps/inertial_demo_ecef",
+  "command": "/usr/bin/clang   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu11 -o CMakeFiles/inertial_demo_ecef.dir/inertial_demo_ecef.c.o -c /Users/adamclare/projects/cerberus/cerberus_c/apps/inertial_demo_ecef/inertial_demo_ecef.c",
+  "file": "/Users/adamclare/projects/cerberus/cerberus_c/apps/inertial_demo_ecef/inertial_demo_ecef.c"
+}
+]

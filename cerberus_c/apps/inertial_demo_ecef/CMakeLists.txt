@@ -1,0 +1,1 @@
+add_executable(inertial_demo_ecef inertial_demo_ecef.c)

@@ -1,0 +1,1 @@
+add_subdirectory(inertial_demo_ecef)
