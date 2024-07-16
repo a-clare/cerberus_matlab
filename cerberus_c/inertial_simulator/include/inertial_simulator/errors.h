@@ -9,7 +9,16 @@ typedef enum {
   INERTIAL_SIM_ERROR_NONE,
 
   // When a null pointer input is passed in (and expecting non null)
-  INERTIAL_SIM_ERROR_NULL_INPUT
+  INERTIAL_SIM_ERROR_NULL_INPUT,
+
+  // A memory allocation error/failed
+  INERTIAL_SIM_ERROR_ALLOC,
+
+  // A read error occured
+  INERTIAL_SIM_ERROR_READ,
+
+  // A bad file, filename/path, etc, is encountered
+  INERTIAL_SIM_ERROR_FILE
 } INERTIAL_SIM_ERROR;
 
 #ifdef __cplusplus
